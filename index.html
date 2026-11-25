@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EMKT — Rediseño</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Objetos que flotan detrás de todo el sitio (parallax con GSAP) -->
+<div class="float-layer" aria-hidden="true">
+  <span class="f capsule cold" data-speed="-0.6" style="left:6%;top:62%;width:38px;height:84px"></span>
+  <span class="f capsule warm" data-speed="-1.4" style="left:46%;top:92%;width:22px;height:48px"></span>
+  <span class="f capsule" data-speed="-0.9" style="right:4%;top:118%;width:64px;height:140px"></span>
+  <span class="f capsule cold" data-speed="-1.8" style="left:12%;top:150%;width:28px;height:62px"></span>
+  <span class="f ring dashed" data-speed="-0.4" style="left:-180px;top:40%;width:420px;height:420px"></span>
+  <span class="f ring" data-speed="-1.1" style="right:-120px;top:130%;width:300px;height:300px"></span>
+  <span class="f dot" data-speed="-0.7" style="left:30%;top:30%"></span>
+  <span class="f dot" data-speed="-1.6" style="right:22%;top:80%"></span>
+  <span class="f plus" data-speed="-1.2" style="left:60%;top:56%">+</span>
+  <span class="f plus" data-speed="-2" style="left:20%;top:120%">+</span>
+</div>
+
+<header class="nav">
+  <a href="#top" class="logo" aria-label="EMKT, inicio"><b>EMKT</b><i aria-hidden="true"></i></a>
+  <nav class="nav-links" id="menu" aria-label="Principal">
+    <a href="#ecosistema" data-i18n="nav.eco">Ecosistema</a>
+    <a href="#trabajo" data-i18n="nav.work">Trabajo</a>
+    <a href="#corredor" data-i18n="nav.ind">Industrias</a>
+    <a href="#estudio" data-i18n="nav.studio">Estudio</a>
+    <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang" role="group" aria-label="Idioma">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button><button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a href="#contacto" class="btn btn-solid" data-i18n="cta">Agendar consulta</a>
+    <button type="button" class="menu-btn" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 6h14M2 12h14"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- HERO: video a pantalla completa, tipografía en bloque, microtextos -->
+<section id="top" class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="poster.jpg" src="hero.mp4"></video>
+  </div>
+  <div class="hero-shade" aria-hidden="true"></div>
+
+  <p class="micro m-tl hero-in" data-i18n="hero.m1">Agencia de marketing<br>digital bicultural<br>desde hace 12 años.</p>
+  <p class="micro m-tc hero-in" data-i18n="hero.m2">California<br>San Miguel de Allende</p>
+
+  <p class="hero-kicker hero-in" data-i18n="hero.kicker">Lujo y tecnología<br>para dos mercados</p>
+  <p class="micro m-ml hero-in" data-i18n="hero.lead">Posicionamos marcas de lujo en el corredor México–Estados Unidos con precisión de dato y lectura cultural.</p>
+
+  <h1 class="hero-title">
+    <span class="line"><span data-i18n="hero.l1">Dos mercados.</span></span>
+    <span class="line"><span data-i18n="hero.l2">Un solo</span></span>
+    <span class="line"><span data-i18n="hero.l3">criterio.</span></span>
+  </h1>
+
+  <p class="micro m-bl hero-in" data-i18n="hero.m3">Data Hub · Creative Branding<br>Production Lab · Shop</p>
+  <div class="m-br hero-in">
+    <p class="micro" data-i18n="hero.m4">Agenda una<br>consulta</p>
+    <a href="#contacto" class="pill-cta"><span data-i18n="cta">Agendar consulta</span><i aria-hidden="true">+</i></a>
+  </div>
+  <a href="#estudio" class="scroll-cue" aria-label="Bajar a la siguiente sección"><span></span></a>
+</section>
+
+<!-- ESTUDIO -->
+<section id="estudio" class="light section">
+  <div class="wrap split">
+    <div class="grow">
+      <p class="eyebrow" data-i18n="studio.eyebrow">01 — Estudio</p>
+      <h2 class="statement" data-i18n="studio.statement">El lujo y la tecnología no se mezclan. En su mejor versión, son lo mismo: precisión absoluta al servicio de una experiencia irrepetible.</h2>
+      <p class="lead" data-i18n="studio.lead">Durante doce años hemos construido marcas que operan con la misma autoridad en Beverly Hills que en un hotel boutique de San Miguel de Allende. No traducimos campañas: las pensamos desde los dos lados.</p>
+    </div>
+    <ul class="tensions">
+      <li><span>California</span><span>+</span><span>San Miguel de Allende</span></li>
+      <li><span>Tecnología</span><span>+</span><span>Cultura</span></li>
+      <li><span>Precisión</span><span>+</span><span>Carácter</span></li>
+      <li><span>Digital</span><span>+</span><span>Táctil</span></li>
+      <li><span>Dato</span><span>+</span><span>Experiencia</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ECOSISTEMA: cuatro filas abiertas, sin tarjetas -->
+<section id="ecosistema" class="section wrap">
+  <div class="head-row">
+    <div>
+      <p class="eyebrow" data-i18n="eco.eyebrow">02 — Ecosistema</p>
+      <h2 class="h2" data-i18n="eco.title">Cuatro ramas.<br>Una sola operación.</h2>
+    </div>
+    <p class="lead" data-i18n="eco.lead">Cada rama funciona por sí sola. Juntas, cubren el ciclo completo de una marca: del dato a la pieza, de la pieza a la venta.</p>
+  </div>
+  <ol class="branches">
+    <li class="branch"><i class="chip chip-1"></i><small>01</small><h3>Data Hub</h3>
+      <p>Inteligencia de mercado, analítica y automatización. La señal antes que la opinión.</p>
+      <ul><li>Analítica de datos</li><li>SEO local e internacional</li><li>Optimización para IA</li><li>Automatización</li></ul></li>
+    <li class="branch"><i class="chip chip-2"></i><small>02</small><h3>Creative Branding</h3>
+      <p>Identidad, dirección de arte y contenido con contexto cultural para ambos mercados.</p>
+      <ul><li>Identidad y lineamientos</li><li>Dirección de arte</li><li>Redes sociales bilingües</li><li>Email marketing</li></ul></li>
+    <li class="branch"><i class="chip chip-3"></i><small>03</small><h3>Production Lab</h3>
+      <p>Fotografía, video y producción con estándar editorial, en locación o en estudio.</p>
+      <ul><li>Fotografía y video</li><li>Dron</li><li>Contenido con IA</li><li>Piezas impresas</li></ul></li>
+    <li class="branch"><i class="chip chip-4"></i><small>04</small><h3>Shop</h3>
+      <p>Comercio digital para marcas que venden a ambos lados de la frontera.</p>
+      <ul><li>Tiendas Shopify</li><li>Sitios web bilingües</li><li>Estrategia de lanzamiento</li><li>Alcance por definir</li></ul></li>
+  </ol>
+</section>
+
+<!-- TRABAJO -->
+<section id="trabajo" class="section wrap" style="border-top:1px solid var(--linea)">
+  <div class="head-row">
+    <div>
+      <p class="eyebrow" data-i18n="work.eyebrow">03 — Trabajo selecto</p>
+      <h2 class="h2" data-i18n="work.title">Marcas con criterio.</h2>
+    </div>
+    <a href="#trabajo" class="link-line"><span data-i18n="work.all">Ver portafolio completo</span>
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+  </div>
+  <div class="work">
+    <a href="#trabajo" class="case"><figure><span class="capsule warm"></span><figcaption>Imagen del proyecto pendiente</figcaption></figure><h3>Grupo hotelero boutique <small>Identidad</small></h3></a>
+    <a href="#trabajo" class="case"><figure><span class="capsule"></span><span class="big">+40%</span><figcaption>Leads calificados</figcaption></figure><h3>Campaña social bilingüe <small>Social</small></h3></a>
+    <a href="#trabajo" class="case"><figure><span class="capsule cold"></span><figcaption>Imagen del proyecto pendiente</figcaption></figure><h3>Sitio web bilingüe a medida <small>Web</small></h3></a>
+  </div>
+</section>
+
+<!-- CORREDOR -->
+<section id="corredor" class="light section">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="cor.eyebrow">04 — El corredor</p>
+    <h2 class="statement" style="max-width:860px" data-i18n="cor.title">Un equipo, dos husos horarios, el mismo estándar.</h2>
+    <div class="corridor">
+      <div><small>BASE</small><b>California</b><p>Estrategia y cuentas en Estados Unidos.</p></div>
+      <div class="route" aria-hidden="true"><i class="a"></i><i class="runner"></i><i class="b"></i></div>
+      <div class="right"><small>ESTUDIO · 20.9144° N, 100.7452° W</small><b>San Miguel de Allende</b><p>Producción, cultura y operación en México.</p></div>
+    </div>
+    <p class="eyebrow" data-i18n="cor.ind">Industrias</p>
+    <div class="pills">
+      <span class="pill">Hotelería</span><span class="pill">Restaurantes</span><span class="pill">Bienes raíces</span><span class="pill">Bares y viñedos</span><span class="pill">Diseño de interiores</span><span class="pill">Galerías de arte</span><span class="pill">Tours</span><span class="pill">Wellness y spa</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contact grid-lines">
+  <div class="halo"></div>
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="contact.eyebrow">05 — Contacto</p>
+    <h2 class="big-word" data-i18n="contact.big">Conversemos.</h2>
+    <div class="contact-row">
+      <a href="#contacto" class="btn btn-solid" style="min-height:56px;padding:0 32px;font-size:16px"><span data-i18n="cta">Agendar consulta</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <dl>
+        <div><dt>TELÉFONO</dt><dd><a href="tel:+14152005557">+1 415 200 5557</a><a href="#contacto">WhatsApp</a></dd></div>
+        <div><dt>ESTUDIO</dt><dd>Calz. de La Aurora 30, Int. 8<br>San Miguel de Allende, Gto.</dd></div>
+        <div><dt>HORARIO</dt><dd>Lun–Vie 9:00–17:00<br>Sáb 9:00–15:00</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ANEXO: SISTEMA DE IDENTIDAD -->
+<section id="marca" class="brand section wrap">
+  <span class="brand-tag">ANEXO — SISTEMA DE IDENTIDAD v0.1 · MATERIA PRIMA</span>
+
+  <div class="logos">
+    <div class="logo-card">
+      <small>LOGOTIPO — SOBRE OBSIDIANA</small>
+      <div class="logo-xl"><b>EMKT</b><span class="capsule" aria-hidden="true"></span></div>
+      <small>Archivo Expanded 640 · tracking +20 · cápsula = 0.76 × altura de mayúscula</small>
+    </div>
+    <div class="logo-card on-cal">
+      <small>LOGOTIPO — SOBRE CAL</small>
+      <div class="logo-xl"><b>EMKT</b><span class="solid-mark" aria-hidden="true"></span></div>
+      <small>Versión monocroma para piezas táctiles: papelería, grabado, bordado.</small>
+    </div>
+  </div>
+
+  <div class="subhead"><h3>Color</h3><p>Cuatro tintas con nombre de material. El azul y el naranja nunca son fondo: viven dentro del objeto. Haz clic para copiar el HEX.</p></div>
+  <div class="swatches">
+    <button type="button" class="swatch" data-hex="#070815"><span class="sw" style="background:#070815"></span><span class="row">Obsidiana <code>#070815</code></span><em>Fondo principal · 60%</em></button>
+    <button type="button" class="swatch" data-hex="#ECEAE4"><span class="sw" style="background:#ECEAE4"></span><span class="row">Cal <code>#ECEAE4</code></span><em>Fondo de pausa · 30%</em></button>
+    <button type="button" class="swatch" data-hex="#1F2BFF"><span class="sw" style="background:#1F2BFF"></span><span class="row">Pacífico <code>#1F2BFF</code></span><em>Señal · dentro del material</em></button>
+    <button type="button" class="swatch" data-hex="#E8622C"><span class="sw" style="background:#E8622C"></span><span class="row">Cantera <code>#E8622C</code></span><em>Temperatura · acentos mínimos</em></button>
+  </div>
+
+  <div class="type-grid">
+    <div class="type-a">
+      <div class="type-label"><span>PRIMARIA — ARCHIVO (OMNIBUS-TYPE, BUENOS AIRES)</span><span>ANCHO 62–125 · SE ANIMA CON EL SCROLL</span></div>
+      <span class="specimen">Precisión<br>con origen.</span>
+      <p class="lead">Grotesca de estructura racional con memoria latinoamericana. Se expande para titular y se mantiene en ancho normal para leer.</p>
+    </div>
+    <div class="type-b">
+      <div class="type-label"><span>DATO — JETBRAINS MONO</span></div>
+      <span class="mono-spec">12 años<br>20.9144° N<br>ES / EN</span>
+      <p class="lead" style="font-size:15px">Solo para cifras, coordenadas, índices y etiquetas. Aparece de cerca, nunca domina.</p>
+    </div>
+  </div>
+
+  <div class="subhead"><h3>Material</h3><p>El dato como metal precioso. Un solo objeto con tres temperaturas, siempre contenido y con un borde de luz.</p></div>
+  <div class="materials">
+    <figure><span class="capsule cold"></span><figcaption>FRÍO · DATA HUB</figcaption></figure>
+    <figure><span class="capsule"></span><figcaption>EQUILIBRIO · MARCA</figcaption></figure>
+    <figure><span class="capsule warm"></span><figcaption>CÁLIDO · PRODUCTION / SHOP</figcaption></figure>
+  </div>
+
+  <div class="principles">
+    <div><small>01</small><b>Precisión visible</b><p>Retícula de 12 columnas expuesta en líneas de 1 px. Nada se coloca sin una razón que pueda explicarse.</p></div>
+    <div><small>02</small><b>Profundidad progresiva</b><p>De lejos: titular, objeto, vacío. De cerca: coordenadas, husos horarios en vivo, grano en el material.</p></div>
+    <div><small>03</small><b>Tensión resuelta</b><p>Pacífico y Cantera conviven en el mismo objeto. Obsidiana y Cal se alternan por sección, sin elegir lado.</p></div>
+  </div>
+
+  <div class="not"><span>NO ES:</span><span>folclore mexicano</span><span>startup tech genérica</span><span>colores pastel</span><span>gradientes de fondo</span><span>íconos culturales</span><span>ornamento</span></div>
+</section>
+</main>
+
+<footer>
+  <span>© 2026 EMKT</span>
+  <nav aria-label="Redes y legales"><a href="#top">Instagram</a><a href="#top">LinkedIn</a><a href="#top">Facebook</a><a href="#top">Privacidad</a><a href="#top">Términos</a></nav>
+</footer>
+
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
